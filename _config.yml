@@ -1,14 +1,23 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: MINDPIN TEAM
+description: 我们是一个轻型快速反应团队；我们正在持续努力开发简洁的工具和有趣的内容；
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://mindpin.com" # the base hostname & protocol for your site
 
-# Build settings
-markdown: kramdown
+encoding: UTF-8
+
+# github 风格 markdown
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks
+
+# 以 _miniwiki 文件夹作为词条资源文件夹
+collections: 
+  works:
+    output: true

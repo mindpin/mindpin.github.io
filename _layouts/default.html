@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
+{% include head.html %}
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+<body>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-pad-8 col-pad-offset-2'>
+        {% include header.html %}
+        <div class="page-content">
+          {{ content }}
+        </div>
+        {% include footer.html %}
       </div>
     </div>
+  </div>
 
-    {% include footer.html %}
+<script type="text/javascript" src='http://static.bshare.cn/b/buttonLite.js#uuid=57bc5d98-618c-410c-83cd-299d859bba76&style=-1'></script>
 
-  </body>
+<script src="http://s4.cnzz.com/z_stat.php?id=1253740402&web_id=1253740402" language="JavaScript"></script>
 
+<script type="text/javascript" src='/js/jquery-2.1.1.min.js'></script>
+<script type="text/javascript" src='/js/ui.js'></script>
+</body>
 </html>

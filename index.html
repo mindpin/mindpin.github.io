@@ -2,22 +2,70 @@
 layout: default
 ---
 
-<div class="home">
+<div class="works">
+  <div class='set type-a'></div>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+  <div class='set type-b'>
+    <h2>已经发布的作品</h2>
+    <div class='desc'>
+      <span>这些产品都工作良好，并且正在持续改进。欢迎使用和提建议。</span>
+    </div>
+    <div class='items'>
+    {% for item in site.data.works %}
+      {% if item.type == 'B' %}
+      <a href='/{{item.name}}.html' class='item' data-name='{{ item.name }}'>
+        <div class='cover'>
+          <div class='ibox' style='background-image:url({{ item.image }})'></div>
+        </div>
+        <div class='title'>{{ item.title }}</div>
+        <div class='published-at'>{{ item.published_at }}</div>
+      </a>
+      {% endif %}
     {% endfor %}
-  </ul>
+    </div>
+  </div>
+</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<div class="works">
+  <div class='set type-c'>
+    <h2>正在实验和研发中的作品</h2>
+    <div class='desc'>
+      <span>正在实验中的各种不成熟想法。可能会正式地做下去也可能中途关闭。如果有兴趣的的话，欢迎尝试。</span>
+    </div>
+    <div class='items'>
+    {% for item in site.data.works %}
+      {% if item.type == 'C' %}
+      <a href='/{{item.name}}.html' class='item' data-name='{{ item.name }}'>
+        <div class='cover'>
+          <div class='ibox' style='background-image:url({{ item.image }})'></div>
+        </div>
+        <div class='title'>{{ item.title }}</div>
+        <div class='published-at'>{{ item.published_at }}</div>
+      </a>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
 
+<div class="works">
+  <div class='set type-d'>
+    <h2>一些其他作品</h2>
+    <div class='desc'>
+      <span>我们开发的一些 DEMO，小游戏，各种插件。</span>
+    </div>
+    <div class='items'>
+    {% for item in site.data.works %}
+      {% if item.type == 'D' %}
+      <a href='/{{item.name}}.html' class='item' data-name='{{ item.name }}'>
+        <div class='cover'>
+          <div class='ibox' style='background-image:url({{ item.image }})'></div>
+        </div>
+        <div class='title'>{{ item.title }}</div>
+        <div class='published-at'>{{ item.published_at }}</div>
+      </a>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
 </div>

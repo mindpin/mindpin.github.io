@@ -1,15 +1,28 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+{% for item in site.data.works %}{% if item.name == page.key %}
+<div class="page-project">
+  <div class='page-project-info'>
+    <h2>{{ item.title }}</h2>
+    <div class='url'>
+      <a href='{{ item.url }}' target='_blank'>{{ item.url }}</a>
+    </div>
+    <div class='desc'>{{ item.desc }}</div>
+    <div class='cover'>
+      <div class='ibox' style='background-image:url({{ item.image }})'></div>
+    </div>
+    <article class="info-content">
+      {{ content }}
+    </article>
+  </div>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+  <div class='page-share' data-url='{{ item.url }}' data-image='{{ item.image }}'>
+    {% include bshare.html %}
+  </div>
 
-</div>
+  <div class='page-comments'>
+    {% include duoshuo.html key=item.name title=item.title path=page.permalink %}
+  </div>
+</div>{% endif %}{% endfor %}

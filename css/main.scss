@@ -1,52 +1,230 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
+// Import partials from `sass_dir` (defaults to `_sass`)
+// @import "syntax-highlighting";
 
+$body-background-color: #f7f7f7;
+$fa-font-path: "/css/fonts";
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+@import "lily/css/lily.scss";
 
-$spacing-unit:     30px;
+// ------------------
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+body {
+  > a[title] {
+    display: none;
+  }
 }
 
+.site-header {
+  $scale: 0.7;
+  .logo {
+    display: block;
+    background: url(mindpin_250x60.png) no-repeat;
+    width:250px * $scale;
+    height:60px * $scale;
+    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .desc {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 50px;
+    margin-left: 3px;
+  }
+}
 
+.page-content {
+  // background-color: #FFF;
+  margin-bottom: 60px;
+  .works {
+    background-color: #FFF;
+    margin-bottom: 50px;
+    border:solid 1px #ddd;
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+    .set {
+      padding:30px;
+
+      &.type-a {display: none;}
+      h2 {
+        margin:0;margin-bottom:20px;
+        // color:#666;
+      }
+      .desc {
+        color:#666;
+        font-size:16px;
+        margin-bottom:30px;
+      }
+
+      .items {
+        @include clearfix;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        .item {
+          @include col(1/2, $gap:30px);
+          padding-top:15px;
+          padding-bottom:15px;
+          @include transition(all .5s ease);
+          display: block;
+          color: #333;
+          margin-bottom:20px;
+
+          &[data-name='classic-mindmap'] {
+            .title {
+              color: $area-hot;
+            }
+          }
+
+          &:hover {
+            // background-color: #444;
+            // .title {
+            //   color:white;
+            // }
+            // .published-at {
+            //   color:#999;
+            // }
+            background-color: $area-dawn;
+            text-decoration: none;
+          }
+
+          .cover {
+            width:100%;
+            padding-bottom:62.5%;
+            position: relative;
+            margin-bottom:15px;
+            // border:solid 1px #ddd;
+            .ibox {
+              $pd:0px;
+              position:absolute;
+              top:$pd;left:$pd;right:$pd;bottom:$pd;
+              background-size: cover;
+            }
+          }
+          .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+          .published-at {
+            font-size:16px;
+            // font-weight: bold;
+            color:#999;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.site-footer {
+  margin-bottom: 60px;
+  .jekyll {
+    color:#999;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .copyright {
+    color:#999;
+    font-size: 16px;
+  }
+}
+
+.page-project {
+  .page-project-info {
+    margin-bottom: 50px;
+    background: white;
+    padding:30px;
+    border:solid 1px #ddd;
+
+    h2 {
+      margin-bottom:20px;
+      margin-top:0;
+      font-size: 24px;
+    }
+
+    .url {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .desc {
+      color: #777;
+      background-color: #F9F9F9;
+      border-left: solid 4px #ddd;
+      padding: 15px 15px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .cover {
+      width:100%;
+      padding-bottom:62.5%;
+      position: relative;
+      margin-bottom:15px;
+      // border:solid 1px #ddd;
+      .ibox {
+        $pd:0px;
+        position:absolute;
+        top:$pd;left:$pd;right:$pd;bottom:$pd;
+        background-size: cover;
+      }
+    }
+
+  }
+  .page-share {
+    margin-bottom: 50px;
+    @include clearfix;
+    .share-btns {
+      span {
+        float:left;
+        height:25px;line-height:25px;
+        font-size:16px;
+      }
+      a.sre {
+        display:block;
+        float:left;
+        margin-right:5px;
+        font-size:0;
+        line-height:20em;
+        overflow:hidden;
+        width:25px;height:25px;
+        // background-color:white;
+        background:url(syncicon24-bgwhite.png) 0 0 no-repeat;
+        &.sinaminiblog{background-position: 0 0;}
+        &.qqmb{background-position: -90px 0;}
+        &.qzone{background-position: -60px 0;}
+        &.douban{background-position: -150px 0;}
+        &.renren{background-position: -120px 0;}
+        &.more{background-position: -330px 0;}
+      }
+
+      .BSHARE_COUNT {
+        float:left !important;
+        display: block;
+        background: #ECECEC;
+        border-radius:4px;
+        padding:0 10px;
+        font-size:14px;
+        position:relative;
+        margin-left:10px;
+        &:before {
+          content:"";
+          border:solid 6px transparent;
+          border-right:solid 6px #ECECEC;
+          position:absolute;
+          left:-6px * 2;top:6px;
+        }
+      }
+    }
+  }
+  .page-comments {
+    margin-bottom: 30px;
+  }
+}
