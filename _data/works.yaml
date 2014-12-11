@@ -71,6 +71,15 @@
     TalkShare 是一个方便小团队内交流有用的工具/技巧/网站的信息分享服务。<br/>
     在这里你可以看到小伙伴们最近使用过什么好东东，用它搞定了什么任务，发现有助于提高 GTD 效率的小点子。 <br/>
 
+- title: DoneList 做日常
+  name: donelist
+  type: C
+  image: http://img.teamkn.com/i/NXbOZbCy.png
+  published_at: '2014.12.11'
+  url: http://donelist.4ye.me
+  desc: |
+    这是一个成就列表记录应用，可以记录你最近搞定的事情和成功推进的目标，让你更有方向感。
+
 - title: Flappy HTML5 Bird
   name: flappy-html5-bird
   type: D
