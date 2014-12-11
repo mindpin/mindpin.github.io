@@ -67,27 +67,38 @@
   image: http://img.teamkn.com/i/wdGQLk1k.png
   published_at: '2014.12'
   url: http://talkshare.4ye.me/ 
-  desc: TalkShare 是一个方便小团队内交流有用的工具/技巧/网站的信息分享服务。在这里你可以看到小伙伴们最近使用过什么好东东，用它搞定了什么任务，发现有助于提高 GTD 效率的小点子。 
+  desc: |
+    TalkShare 是一个方便小团队内交流有用的工具/技巧/网站的信息分享服务。<br/>
+    在这里你可以看到小伙伴们最近使用过什么好东东，用它搞定了什么任务，发现有助于提高 GTD 效率的小点子。 <br/>
 
 - title: Flappy HTML5 Bird
   name: flappy-html5-bird
   type: D
   image: http://img.teamkn.com/i/gfLx6RNA.png
   published_at: '2014.2'
+  url: http://ben7th.github.io/flappy-html5-bird/
+  desc: |
+    这是 flappy bird 的 html5 版本。<br/>
+    虽然很多其他人已经做过这个小游戏的网页版实现了，不过这个实现的独特性在于，除了 jQuery 没有用其他框架迟滞。<br/>
+    很基础。很简洁。
 
-- title: 思圆笔记（博客）
+- title: 思圆笔记（Blog）
   name: pimfans
   type: D
   image: http://img.teamkn.com/i/ac313Nza.png
   published_at: '2014.10.9'
-  desc: 本站的中心主题是，在互联网时代如何借助个人信息管理 (PIM) 相关的工具和方法，顶住信息过载的压力，有条不紊地处理和利用各类信息，提高个人/团队效率，促进自我/组织的持续提升
+  url: http://pimgeek.github.io/
+  desc: |
+    这个 Blog 的中心主题是，在互联网时代如何借助个人信息管理 (PIM) 相关的工具和方法，顶住信息过载的压力，有条不紊地处理和利用各类信息，提高个人/团队效率，促进自我/组织的持续提升
 
 - title: 四叶技术播客
   name: 4yefm
   type: D
   image: http://img.teamkn.com/i/rwShev1g.png
   published_at: '2014.12'
-  desc: 4ye.fm 为编程爱好者，以及对计算机与编程有兴趣的朋友提供精心准备的播客节目。力求通俗易懂，让大家都有所收获。
+  desc: |
+    4ye.fm 为编程爱好者，以及对计算机与编程有兴趣的朋友提供精心准备的播客节目。<br/>
+    力求通俗易懂，让大家都有所收获。
   url: http://music.weibo.com/snake/boke_boke.php?bid=13416
 
 - title: 微博样式改良插件
