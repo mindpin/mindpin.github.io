@@ -13,6 +13,9 @@ layout: default
     <div class='cover'>
       <div class='ibox' style='background-image:url({{ item.image }})'></div>
     </div>
+    <div class='qr'>
+      <div rel='qrcode' data-url='{{ item.url }}'></div>
+    </div>
     <article class="info-content">
       {{ content }}
     </article>

@@ -206,6 +206,7 @@ body {
     background: white;
     padding:30px;
     border:solid 1px #ddd;
+    position: relative;
 
     .info-content {
       @include markdown;
@@ -215,12 +216,14 @@ body {
       margin-bottom:20px;
       margin-top:0;
       font-size: 24px;
+      height:30px;line-height:30px;
     }
 
     .url {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 30px;
+      height:30px;line-height:30px;
     }
 
     .desc {
@@ -246,6 +249,13 @@ body {
       }
     }
 
+    .qr {
+      position: absolute;
+      width:120px;height:120px;
+      top:-15px;right:30px;
+      border:solid 1px #ddd;
+      background-color: #FFF;
+    }
   }
   .page-share {
     margin-bottom: 50px;
